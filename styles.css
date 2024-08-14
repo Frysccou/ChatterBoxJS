@@ -1,0 +1,190 @@
+/* Estilos generales de la página */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centrado y estilado para las pantallas inicial y de juego */
+#start-screen,
+#game-screen {
+  text-align: center;
+}
+
+/* Titulo del juego con animacion */
+#game-title {
+  font-size: 4rem;
+  color: #4caf50;
+  animation: pulse 1s infinite;
+}
+
+/* Estilos de botones en general */
+#start-btn,
+#next-btn,
+#restart-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Contenedor de preguntas */
+#question-container {
+  margin-bottom: 20px;
+}
+
+/* Estilos para las opciones de respuesta */
+#options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo de los botones de las opciones */
+.option-btn {
+  background-color: #333;
+  color: white;
+  border: 2px solid #4caf50;
+  padding: 10px;
+  margin: 5px 0;
+  width: 80%;
+  max-width: 300px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Efecto hover en las opciones */
+.option-btn:hover {
+  background-color: #4caf50;
+}
+
+/* Opcion correcta con animacion de "breathe" */
+.option-btn.correct {
+  border-color: #4caf50;
+  background-color: #2e7d32;
+  color: white;
+  animation: breatheCorrect 1s ease-in-out;
+}
+
+/* Opcion incorrecta con animacion de "breathe" */
+.option-btn.wrong {
+  border-color: #f44336;
+  background-color: #c62828;
+  color: white;
+  animation: breatheWrong 1s ease-in-out;
+}
+
+/* Animacion del titulo del juego */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animacion "breathe" cuando se acierta */
+@keyframes breatheCorrect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animacion "breathe" cuando se falla */
+@keyframes breatheWrong {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Banner que indica el nivel actual */
+#level-banner {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInOut 2s forwards;
+}
+
+/* Animacion para mostrar y ocultar el banner de nivel */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Centrado del boton "Siguiente" */
+#next-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Nueva animacion de parpadeo para la opcion correcta */
+@keyframes flashCorrect {
+  0%,
+  100% {
+    border-color: #4caf50;
+    box-shadow: 0 0 10px #4caf50;
+  }
+  50% {
+    border-color: #fff;
+    box-shadow: 0 0 20px #fff;
+  }
+}
+
+/* Clase para aplicar el parpadeo a la respuesta correcta */
+.option-btn.correct.flash {
+  animation: flashCorrect 1s ease-in-out;
+}
+
+/* Estilos para los mensajes */
+#message {
+  display: none;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo para mensajes de advertencia */
+#message.warning {
+  background-color: #f44336;
+}
+
+/* Estilo para mensajes de exito */
+#message.success {
+  background-color: #4caf50;
+}

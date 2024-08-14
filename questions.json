@@ -1,0 +1,638 @@
+{
+  "easy": [
+    {
+      "question": "¿Qué es JavaScript?",
+      "options": [
+        "Un lenguaje de programación",
+        "Un sistema operativo",
+        "Un navegador web",
+        "Un editor de texto"
+      ],
+      "answer": "Un lenguaje de programación"
+    },
+    {
+      "question": "¿Qué método se usa para seleccionar un elemento por su ID en JavaScript?",
+      "options": [
+        "getElementById",
+        "querySelectorAll",
+        "getElementByClassName",
+        "getElementByTagName"
+      ],
+      "answer": "getElementById"
+    },
+    {
+      "question": "¿Cuál de los siguientes es un tipo de dato primitivo en JavaScript?",
+      "options": ["Array", "Objeto", "String", "Function"],
+      "answer": "String"
+    },
+    {
+      "question": "¿Cuál es la forma correcta de escribir un comentario en JavaScript?",
+      "options": [
+        "// Comentario",
+        "<!-- Comentario -->",
+        "' Comentario",
+        "/* Comentario */"
+      ],
+      "answer": "// Comentario"
+    },
+    {
+      "question": "¿Qué significa 'NaN' en JavaScript?",
+      "options": [
+        "Not a Number",
+        "New Age Notation",
+        "Null and Negative",
+        "Name and Number"
+      ],
+      "answer": "Not a Number"
+    },
+    {
+      "question": "¿Cuál es el valor predeterminado de una variable no inicializada en JavaScript?",
+      "options": ["0", "null", "undefined", "false"],
+      "answer": "undefined"
+    },
+    {
+      "question": "¿Qué operador se usa para asignar un valor a una variable en JavaScript?",
+      "options": ["=", "==", "===", ":="],
+      "answer": "="
+    },
+    {
+      "question": "¿Qué método se usa para convertir una cadena en un número entero?",
+      "options": ["parseInt", "parseFloat", "Number", "toString"],
+      "answer": "parseInt"
+    },
+    {
+      "question": "¿Cuál de las siguientes opciones es un bucle en JavaScript?",
+      "options": ["if", "for", "while", "else"],
+      "answer": "for"
+    },
+    {
+      "question": "¿Qué devuelve el método `typeof` cuando se usa en un número?",
+      "options": ["'number'", "'string'", "'object'", "'undefined'"],
+      "answer": "'number'"
+    },
+    {
+      "question": "¿Qué palabra clave se usa para declarar una variable en JavaScript?",
+      "options": ["var", "let", "const", "Todas las anteriores"],
+      "answer": "Todas las anteriores"
+    },
+    {
+      "question": "¿Qué método se usa para agregar un elemento al final de un array?",
+      "options": ["push", "pop", "shift", "unshift"],
+      "answer": "push"
+    },
+    {
+      "question": "¿Qué símbolo se usa para acceder a las propiedades de un objeto?",
+      "options": [".", "#", ":", "&"],
+      "answer": "."
+    },
+    {
+      "question": "¿Qué método se usa para unir todos los elementos de un array en una cadena?",
+      "options": ["concat", "join", "push", "pop"],
+      "answer": "join"
+    },
+    {
+      "question": "¿Cómo se define una función en JavaScript?",
+      "options": [
+        "function miFuncion()",
+        "funcion = miFuncion()",
+        "def miFuncion()",
+        "function = miFuncion()"
+      ],
+      "answer": "function miFuncion()"
+    },
+    {
+      "question": "¿Qué evento se activa cuando un usuario hace clic en un elemento?",
+      "options": ["click", "mouseover", "keydown", "change"],
+      "answer": "click"
+    },
+    {
+      "question": "¿Qué método se usa para detener la propagación de un evento?",
+      "options": [
+        "stopPropagation",
+        "preventDefault",
+        "stopEvent",
+        "haltEvent"
+      ],
+      "answer": "stopPropagation"
+    },
+    {
+      "question": "¿Cuál de las siguientes opciones NO es un operador lógico en JavaScript?",
+      "options": ["&&", "||", "!", "++"],
+      "answer": "++"
+    },
+    {
+      "question": "¿Qué se usa para verificar si una propiedad existe en un objeto?",
+      "options": ["in", "exists", "has", "contains"],
+      "answer": "in"
+    },
+    {
+      "question": "¿Qué palabra clave se usa para crear una constante?",
+      "options": ["const", "var", "let", "static"],
+      "answer": "const"
+    },
+    {
+      "question": "¿Cuál es la forma correcta de definir un array en JavaScript?",
+      "options": [
+        "var arr = []",
+        "var arr = {}",
+        "var arr = ()",
+        "var arr = <>"
+      ],
+      "answer": "var arr = []"
+    },
+    {
+      "question": "¿Qué operador se usa para concatenar cadenas?",
+      "options": ["+", "-", "*", "/"],
+      "answer": "+"
+    },
+    {
+      "question": "¿Qué método se usa para eliminar el último elemento de un array?",
+      "options": ["pop", "shift", "unshift", "delete"],
+      "answer": "pop"
+    },
+    {
+      "question": "¿Qué propiedad devuelve la longitud de un array?",
+      "options": ["length", "size", "count", "index"],
+      "answer": "length"
+    },
+    {
+      "question": "¿Cuál de los siguientes NO es un tipo de bucle en JavaScript?",
+      "options": ["for", "do-while", "loop", "while"],
+      "answer": "loop"
+    }
+  ],
+  "intermediate": [
+    {
+      "question": "¿Cuál es la diferencia entre '==' y '===' en JavaScript?",
+      "options": [
+        "Ninguna diferencia",
+        "El primero compara solo el valor y el segundo compara valor y tipo",
+        "El primero compara tipo y el segundo solo valor",
+        "El segundo es más rápido"
+      ],
+      "answer": "El primero compara solo el valor y el segundo compara valor y tipo"
+    },
+    {
+      "question": "¿Qué es un closure en JavaScript?",
+      "options": [
+        "Una función dentro de otra función que tiene acceso a la variable de la función externa",
+        "Una función que se ejecuta solo una vez",
+        "Una función que no tiene retorno",
+        "Un objeto global en JavaScript"
+      ],
+      "answer": "Una función dentro de otra función que tiene acceso a la variable de la función externa"
+    },
+    {
+      "question": "¿Cuál de las siguientes no es una función de array en JavaScript?",
+      "options": ["map", "filter", "reduce", "foreach"],
+      "answer": "foreach"
+    },
+    {
+      "question": "¿Qué es `use strict` en JavaScript?",
+      "options": [
+        "Un modo que ayuda a escribir código más seguro y robusto",
+        "Un operador de comparación",
+        "Un método para mejorar la velocidad de ejecución",
+        "Una función nativa"
+      ],
+      "answer": "Un modo que ayuda a escribir código más seguro y robusto"
+    },
+    {
+      "question": "¿Qué es un 'callback' en JavaScript?",
+      "options": [
+        "Una función que se pasa como argumento a otra función",
+        "Una variable que guarda un valor booleano",
+        "Una función que devuelve otra función",
+        "Un método para manipular el DOM"
+      ],
+      "answer": "Una función que se pasa como argumento a otra función"
+    },
+    {
+      "question": "¿Qué operador se usa para la desestructuración de objetos?",
+      "options": ["{}", "[]", "()", "<>"],
+      "answer": "{}"
+    },
+    {
+      "question": "¿Qué devuelve `typeof NaN` en JavaScript?",
+      "options": ["'number'", "'NaN'", "'undefined'", "'object'"],
+      "answer": "'number'"
+    },
+    {
+      "question": "¿Qué método se usa para copiar los valores de todas las propiedades de un objeto a otro?",
+      "options": [
+        "Object.assign",
+        "Object.copy",
+        "Object.clone",
+        "Object.merge"
+      ],
+      "answer": "Object.assign"
+    },
+    {
+      "question": "¿Qué método devuelve el índice del primer elemento en un array que cumple con una condición?",
+      "options": ["findIndex", "indexOf", "map", "reduce"],
+      "answer": "findIndex"
+    },
+    {
+      "question": "¿Qué palabra clave se usa para declarar una función asíncrona?",
+      "options": ["async", "await", "function", "promise"],
+      "answer": "async"
+    },
+    {
+      "question": "¿Qué es una promesa en JavaScript?",
+      "options": [
+        "Un objeto que representa la eventual finalización (o falla) de una operación asíncrona",
+        "Una función que se ejecuta siempre",
+        "Un método para manejar eventos",
+        "Una expresión lógica"
+      ],
+      "answer": "Un objeto que representa la eventual finalización (o falla) de una operación asíncrona"
+    },
+    {
+      "question": "¿Cuál es la forma correcta de encadenar promesas?",
+      "options": [
+        ".then().catch()",
+        ".promise().await()",
+        ".chain().end()",
+        ".execute().resolve()"
+      ],
+      "answer": ".then().catch()"
+    },
+    {
+      "question": "¿Qué hace el método `Array.prototype.reduce`?",
+      "options": [
+        "Aplica una función a un acumulador y a cada valor del array para reducirlo a un solo valor",
+        "Copia los valores de un array en otro",
+        "Ordena los elementos de un array",
+        "Filtra los elementos de un array"
+      ],
+      "answer": "Aplica una función a un acumulador y a cada valor del array para reducirlo a un solo valor"
+    },
+    {
+      "question": "¿Qué es un iterador en JavaScript?",
+      "options": [
+        "Una función que devuelve un objeto con un método next",
+        "Un método para recorrer arrays",
+        "Una propiedad de un objeto",
+        "Un método para manipular strings"
+      ],
+      "answer": "Una función que devuelve un objeto con un método next"
+    },
+    {
+      "question": "¿Qué función se usa para convertir un objeto JSON en una cadena?",
+      "options": [
+        "JSON.stringify",
+        "JSON.parse",
+        "JSON.convert",
+        "JSON.toString"
+      ],
+      "answer": "JSON.stringify"
+    },
+    {
+      "question": "¿Qué es una función de flecha en JavaScript?",
+      "options": [
+        "Una sintaxis concisa para escribir funciones anónimas",
+        "Una función que siempre devuelve un valor",
+        "Una función que solo se puede usar con arrays",
+        "Una función que no tiene parámetros"
+      ],
+      "answer": "Una sintaxis concisa para escribir funciones anónimas"
+    },
+    {
+      "question": "¿Qué es un módulo en JavaScript?",
+      "options": [
+        "Un archivo que exporta código para ser utilizado en otros archivos",
+        "Un bucle que se ejecuta indefinidamente",
+        "Una variable que guarda una función",
+        "Un método para manipular el DOM"
+      ],
+      "answer": "Un archivo que exporta código para ser utilizado en otros archivos"
+    },
+    {
+      "question": "¿Qué método se usa para eliminar un elemento específico de un array?",
+      "options": ["splice", "slice", "pop", "shift"],
+      "answer": "splice"
+    },
+    {
+      "question": "¿Qué significa 'hoisting' en JavaScript?",
+      "options": [
+        "El proceso de mover las declaraciones al principio de su contexto de ejecución",
+        "El método de crear funciones",
+        "Un tipo de bucle",
+        "Una forma de manipular el DOM"
+      ],
+      "answer": "El proceso de mover las declaraciones al principio de su contexto de ejecución"
+    },
+    {
+      "question": "¿Qué palabra clave se usa para manejar excepciones en JavaScript?",
+      "options": ["try", "catch", "throw", "Todas las anteriores"],
+      "answer": "Todas las anteriores"
+    },
+    {
+      "question": "¿Qué significa el concepto 'event bubbling'?",
+      "options": [
+        "Un evento que comienza desde el elemento más interno hacia el más externo",
+        "Un evento que se repite infinitamente",
+        "Un método de JavaScript",
+        "Un tipo de promesa"
+      ],
+      "answer": "Un evento que comienza desde el elemento más interno hacia el más externo"
+    },
+    {
+      "question": "¿Qué método se usa para convertir un objeto JSON en un objeto JavaScript?",
+      "options": [
+        "JSON.parse",
+        "JSON.stringify",
+        "JSON.convert",
+        "JSON.toString"
+      ],
+      "answer": "JSON.parse"
+    },
+    {
+      "question": "¿Qué método de array NO cambia el array original?",
+      "options": ["map", "push", "pop", "splice"],
+      "answer": "map"
+    },
+    {
+      "question": "¿Qué propiedad se usa para verificar si un objeto tiene una propiedad específica?",
+      "options": ["hasOwnProperty", "exists", "contains", "hasProperty"],
+      "answer": "hasOwnProperty"
+    },
+    {
+      "question": "¿Qué es una función de orden superior?",
+      "options": [
+        "Una función que recibe otra función como argumento",
+        "Una función que se ejecuta antes que las demás",
+        "Una función que se declara fuera de cualquier bloque",
+        "Una función que siempre devuelve un valor"
+      ],
+      "answer": "Una función que recibe otra función como argumento"
+    },
+    {
+      "question": "¿Qué método se usa para recorrer todos los elementos de un array y aplicar una función a cada uno?",
+      "options": ["map", "forEach", "filter", "reduce"],
+      "answer": "forEach"
+    }
+  ],
+  "professional": [
+    {
+      "question": "¿Qué es el event loop en JavaScript?",
+      "options": [
+        "Un mecanismo que maneja la ejecución de múltiples piezas de código",
+        "Un bucle que se ejecuta hasta que una condición sea falsa",
+        "Una función que espera eventos del usuario",
+        "Un método para manipular el DOM"
+      ],
+      "answer": "Un mecanismo que maneja la ejecución de múltiples piezas de código"
+    },
+    {
+      "question": "¿Cuál de las siguientes no es una característica de ES6?",
+      "options": ["Hoisting", "Destructuring", "Arrow functions", "Promesas"],
+      "answer": "Hoisting"
+    },
+    {
+      "question": "¿Qué es un Proxy en JavaScript?",
+      "options": [
+        "Un objeto que envuelve a otro objeto y permite interceptar operaciones",
+        "Un método para manipular arrays",
+        "Un tipo de promesa",
+        "Una forma de declarar funciones"
+      ],
+      "answer": "Un objeto que envuelve a otro objeto y permite interceptar operaciones"
+    },
+    {
+      "question": "¿Qué es un WeakMap en JavaScript?",
+      "options": [
+        "Un objeto que almacena pares clave-valor donde las claves deben ser objetos",
+        "Un mapa que no se puede modificar",
+        "Un objeto que no puede almacenar valores null o undefined",
+        "Un objeto global en JavaScript"
+      ],
+      "answer": "Un objeto que almacena pares clave-valor donde las claves deben ser objetos"
+    },
+    {
+      "question": "¿Qué hace el método `Object.freeze` en JavaScript?",
+      "options": [
+        "Impide que se modifiquen las propiedades de un objeto",
+        "Congela el estado de una variable",
+        "Detiene la ejecución de un bucle",
+        "Elimina las propiedades de un objeto"
+      ],
+      "answer": "Impide que se modifiquen las propiedades de un objeto"
+    },
+    {
+      "question": "¿Qué es un Symbol en JavaScript?",
+      "options": [
+        "Un tipo de dato primitivo cuyo valor es único e inmutable",
+        "Un método para manipular cadenas",
+        "Un bucle especial",
+        "Un operador lógico"
+      ],
+      "answer": "Un tipo de dato primitivo cuyo valor es único e inmutable"
+    },
+    {
+      "question": "¿Qué es un Generador en JavaScript?",
+      "options": [
+        "Una función que puede pausar su ejecución y luego retomarla",
+        "Una función que se ejecuta indefinidamente",
+        "Un método para manipular arrays",
+        "Una forma de crear objetos"
+      ],
+      "answer": "Una función que puede pausar su ejecución y luego retomarla"
+    },
+    {
+      "question": "¿Qué método de Promise se usa para manejar múltiples promesas al mismo tiempo?",
+      "options": [
+        "Promise.all",
+        "Promise.any",
+        "Promise.resolve",
+        "Promise.chain"
+      ],
+      "answer": "Promise.all"
+    },
+    {
+      "question": "¿Qué hace el operador de propagación (...) en JavaScript?",
+      "options": [
+        "Expande un array o un objeto en sus elementos o propiedades individuales",
+        "Combina múltiples objetos en uno solo",
+        "Aplica una función a todos los elementos de un array",
+        "Divide una cadena en un array de caracteres"
+      ],
+      "answer": "Expande un array o un objeto en sus elementos o propiedades individuales"
+    },
+    {
+      "question": "¿Qué hace el método `Object.entries` en JavaScript?",
+      "options": [
+        "Devuelve un array de pares [key, value] de un objeto",
+        "Copia todas las propiedades de un objeto a otro",
+        "Devuelve todas las claves de un objeto",
+        "Ordena las propiedades de un objeto"
+      ],
+      "answer": "Devuelve un array de pares [key, value] de un objeto"
+    },
+    {
+      "question": "¿Qué es un descriptor de propiedad en JavaScript?",
+      "options": [
+        "Un objeto que describe las propiedades de otra propiedad",
+        "Un método para definir objetos",
+        "Una función para modificar el valor de una propiedad",
+        "Un objeto que contiene una clave y un valor"
+      ],
+      "answer": "Un objeto que describe las propiedades de otra propiedad"
+    },
+    {
+      "question": "¿Cuál es la diferencia entre `let` y `var`?",
+      "options": [
+        "`let` tiene alcance de bloque y `var` tiene alcance de función",
+        "No hay diferencia",
+        "`let` se puede redeclarar y `var` no",
+        "`let` es más lento que `var`"
+      ],
+      "answer": "`let` tiene alcance de bloque y `var` tiene alcance de función"
+    },
+    {
+      "question": "¿Qué hace el método `Reflect.ownKeys` en JavaScript?",
+      "options": [
+        "Devuelve todas las propiedades de un objeto, incluidas las no enumerables",
+        "Copia las propiedades de un objeto a otro",
+        "Elimina todas las claves de un objeto",
+        "Devuelve las claves de un objeto como un array"
+      ],
+      "answer": "Devuelve todas las propiedades de un objeto, incluidas las no enumerables"
+    },
+    {
+      "question": "¿Qué hace el método `String.prototype.padStart`?",
+      "options": [
+        "Rellena el principio de la cadena con una cadena especificada",
+        "Rellena el final de la cadena con una cadena especificada",
+        "Recorta el principio de la cadena",
+        "Devuelve una subcadena desde el principio"
+      ],
+      "answer": "Rellena el principio de la cadena con una cadena especificada"
+    },
+    {
+      "question": "¿Qué es una WeakSet en JavaScript?",
+      "options": [
+        "Un conjunto cuyos elementos deben ser objetos y no se pueden iterar",
+        "Un conjunto que no acepta elementos duplicados",
+        "Un conjunto que almacena solo valores primitivos",
+        "Un conjunto global en JavaScript"
+      ],
+      "answer": "Un conjunto cuyos elementos deben ser objetos y no se pueden iterar"
+    },
+    {
+      "question": "¿Qué hace el método `Array.prototype.flat` en JavaScript?",
+      "options": [
+        "Aplana arrays anidados en un array de nivel único",
+        "Convierte un array en un objeto",
+        "Devuelve la primera propiedad del array",
+        "Ordena el array en orden alfabético"
+      ],
+      "answer": "Aplana arrays anidados en un array de nivel único"
+    },
+    {
+      "question": "¿Qué es un `Map` en JavaScript?",
+      "options": [
+        "Un objeto que almacena pares clave-valor y recuerda el orden de inserción",
+        "Un método para recorrer arrays",
+        "Una función para filtrar elementos de un array",
+        "Una propiedad global en JavaScript"
+      ],
+      "answer": "Un objeto que almacena pares clave-valor y recuerda el orden de inserción"
+    },
+    {
+      "question": "¿Cuál es la diferencia entre `Map` y `WeakMap`?",
+      "options": [
+        "`WeakMap` solo acepta objetos como claves",
+        "No hay diferencia",
+        "`Map` es más rápido",
+        "`WeakMap` no acepta valores primitivos"
+      ],
+      "answer": "`WeakMap` solo acepta objetos como claves"
+    },
+    {
+      "question": "¿Qué hace el método `Array.prototype.every`?",
+      "options": [
+        "Comprueba si todos los elementos de un array cumplen una condición",
+        "Devuelve el primer elemento de un array",
+        "Filtra los elementos de un array",
+        "Convierte un array en una cadena"
+      ],
+      "answer": "Comprueba si todos los elementos de un array cumplen una condición"
+    },
+    {
+      "question": "¿Qué hace el método `Promise.race`?",
+      "options": [
+        "Devuelve la promesa que se resuelva o rechace primero",
+        "Devuelve la promesa que se resuelva última",
+        "Combina múltiples promesas en una sola",
+        "Encadena promesas en serie"
+      ],
+      "answer": "Devuelve la promesa que se resuelva o rechace primero"
+    },
+    {
+      "question": "¿Qué es una función generadora?",
+      "options": [
+        "Una función que puede detener su ejecución y luego reanudarla",
+        "Una función que devuelve un valor inmediatamente",
+        "Una función que se ejecuta solo una vez",
+        "Una función que crea promesas"
+      ],
+      "answer": "Una función que puede detener su ejecución y luego reanudarla"
+    },
+    {
+      "question": "¿Qué hace el método `Object.seal` en JavaScript?",
+      "options": [
+        "Impide que se añadan nuevas propiedades a un objeto",
+        "Impide que se modifiquen las propiedades de un objeto",
+        "Elimina todas las propiedades de un objeto",
+        "Devuelve una copia de un objeto"
+      ],
+      "answer": "Impide que se añadan nuevas propiedades a un objeto"
+    },
+    {
+      "question": "¿Qué hace el método `String.prototype.trim` en JavaScript?",
+      "options": [
+        "Elimina los espacios en blanco al principio y al final de una cadena",
+        "Corta la cadena por la mitad",
+        "Convierte la cadena a minúsculas",
+        "Devuelve una subcadena"
+      ],
+      "answer": "Elimina los espacios en blanco al principio y al final de una cadena"
+    },
+    {
+      "question": "¿Qué es un `Set` en JavaScript?",
+      "options": [
+        "Una colección de valores únicos",
+        "Un array ordenado",
+        "Un objeto con pares clave-valor",
+        "Una función que se ejecuta automáticamente"
+      ],
+      "answer": "Una colección de valores únicos"
+    },
+    {
+      "question": "¿Qué método se usa para agrupar elementos de un array en JavaScript?",
+      "options": ["reduce", "groupBy", "filter", "map"],
+      "answer": "reduce"
+    },
+    {
+      "question": "¿Qué hace el método `String.prototype.includes` en JavaScript?",
+      "options": [
+        "Comprueba si una cadena contiene otra cadena",
+        "Devuelve la longitud de una cadena",
+        "Convierte la cadena en un array",
+        "Elimina una subcadena"
+      ],
+      "answer": "Comprueba si una cadena contiene otra cadena"
+    },
+    {
+      "question": "¿Qué es una función asíncrona en JavaScript?",
+      "options": [
+        "Una función que puede esperar a que otras funciones se completen antes de continuar",
+        "Una función que se ejecuta inmediatamente",
+        "Una función que siempre devuelve un valor",
+        "Una función que se ejecuta en segundo plano"
+      ],
+      "answer": "Una función que puede esperar a que otras funciones se completen antes de continuar"
+    }
+  ]
+}
