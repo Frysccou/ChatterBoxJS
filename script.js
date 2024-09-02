@@ -29,6 +29,7 @@ startBtn.addEventListener("click", async () => {
   startScreen.style.display = "none";
   gameScreen.style.display = "block";
   setLevel("easy");
+  loadGameState();
 });
 
 // Manejador para el boton "Siguiente"
@@ -36,7 +37,7 @@ nextBtn.addEventListener("click", () => {
   if (answerSelected) {
     currentQuestionIndex++;
     questionCount++;
-    answerSelected = false; // Resetea el estado de seleccion
+    answerSelected = false;
 
     // Cambia de nivel cada 10 preguntas
     if (questionCount % 10 === 0) {
@@ -52,11 +53,13 @@ nextBtn.addEventListener("click", () => {
         setNextQuestion();
       }
     }
+    saveGameState(); 
   }
 });
 
 // Reinicia el juego recargando la pagina
 restartBtn.addEventListener("click", () => {
+  localStorage.clear(); 
   location.reload();
 });
 
@@ -67,7 +70,7 @@ function setLevel(level) {
   currentQuestionIndex = 0;
   questionCount = 0;
   answerSelected = false;
-  nextBtn.style.display = "none"; // Oculta el boton "Siguiente"
+  nextBtn.style.display = "none"; 
   displayLevelBanner();
   setNextQuestion();
 }
@@ -92,8 +95,8 @@ function setNextQuestion() {
 // Muestra la pregunta y mezcla las opciones antes de mostrarlas
 function showQuestion(question) {
   questionEl.textContent = question.question;
-  optionsContainer.innerHTML = ""; // Limpia las opciones existentes
-  const options = shuffleOptions(question.options); // Mezcla las opciones
+  optionsContainer.innerHTML = "";
+  const options = shuffleOptions(question.options); 
   options.forEach((option) => {
     const button = document.createElement("button");
     button.className = "option-btn";
@@ -110,24 +113,24 @@ function resetState() {
     button.classList.remove("wrong");
     button.removeEventListener("click", selectAnswer);
   });
-  nextBtn.style.display = "none"; // Oculta el boton "Siguiente"
+  nextBtn.style.display = "none"; 
 }
 
 // Maneja la seleccion de respuestas
 function selectAnswer(e) {
-  if (answerSelected) return; // Evita seleccionar multiples veces
+  if (answerSelected) return; 
 
   const selectedButton = e.target;
   const correct = shuffledQuestions[currentQuestionIndex].answer;
 
-  answerSelected = true; // Marca que se selecciono una respuesta
+  answerSelected = true;
 
   if (selectedButton.textContent === correct) {
     selectedButton.classList.add("correct");
     score++;
   } else {
     selectedButton.classList.add("wrong");
-    showCorrectAnswer(); // Muestra la respuesta correcta si se falla
+    showCorrectAnswer();
   }
 
   // Desactiva todas las opciones
@@ -138,14 +141,14 @@ function selectAnswer(e) {
   // Muestra el boton "Siguiente" despues de la animacion
   setTimeout(() => {
     nextBtn.style.display = "block";
-  }, 1000); // Ajusta el tiempo segun la duracion de la animacion
+  }, 1000); 
 }
 
 // Muestra la respuesta correcta con un brillo parpadeante
 function showCorrectAnswer() {
   Array.from(optionsContainer.children).forEach((button) => {
     if (button.textContent === shuffledQuestions[currentQuestionIndex].answer) {
-      button.classList.add("correct", "flash"); // Aplica las clases para parpadeo
+      button.classList.add("correct", "flash"); 
     }
   });
 }
@@ -153,9 +156,41 @@ function showCorrectAnswer() {
 // Finaliza el juego mostrando el puntaje
 function endGame() {
   questionEl.textContent = `¡Juego terminado! Puntaje final: ${score} de 30`;
-  optionsContainer.innerHTML = ""; // Limpia las opciones
+  optionsContainer.innerHTML = ""; 
   nextBtn.style.display = "none";
-  restartBtn.style.display = "block"; // Muestra el boton para reiniciar
+  restartBtn.style.display = "block"; 
+  saveHighScore(); 
+}
+
+// Guarda el puntaje en el almacenamiento local
+function saveHighScore() {
+  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  highScores.push(score);
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+}
+
+// Guarda el estado del juego en el almacenamiento local
+function saveGameState() {
+  const gameState = {
+    currentQuestionIndex,
+    score,
+    currentLevel,
+    questionCount
+  };
+  localStorage.setItem("gameState", JSON.stringify(gameState));
+}
+
+// Carga el estado del juego desde el almacenamiento local
+function loadGameState() {
+  const savedState = JSON.parse(localStorage.getItem("gameState"));
+  if (savedState) {
+    currentQuestionIndex = savedState.currentQuestionIndex;
+    score = savedState.score;
+    currentLevel = savedState.currentLevel;
+    questionCount = savedState.questionCount;
+    setLevel(currentLevel);
+    setNextQuestion();
+  }
 }
 
 // Mezcla las preguntas aleatoriamente
